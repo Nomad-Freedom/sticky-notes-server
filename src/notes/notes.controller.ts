@@ -22,7 +22,7 @@ export class NotesController {
   }
 
   @Get()
-  findAll() {
+  findAll(): Promise<Note[]> {
     return this.notesService.findAll();
   }
 

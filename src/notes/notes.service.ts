@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateNoteDto } from './dto/create-note.dto';
 import { UpdateNoteDto } from './dto/update-note.dto';
@@ -15,8 +15,14 @@ export class NotesService {
     return this.notesRepository.createNote(createNoteDto);
   }
 
-  findAll() {
-    return `This action returns all notes`;
+  async findAll(): Promise<Note[]> {
+    try {
+      const notes = await this.notesRepository.find({});
+
+      return notes;
+    } catch (error) {
+      throw new InternalServerErrorException();
+    }
   }
 
   findOne(id: number) {
