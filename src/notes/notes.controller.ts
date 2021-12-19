@@ -27,8 +27,8 @@ export class NotesController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.notesService.findOne(+id);
+  findOne(@Param('id') id: string): Promise<Note> {
+    return this.notesService.findOne(id);
   }
 
   @Patch(':id')
