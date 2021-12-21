@@ -40,8 +40,18 @@ export class NotesService {
     return note;
   }
 
-  update(id: number, updateNoteDto: UpdateNoteDto) {
-    return `This action updates a #${id} note`;
+  async update(id: string, updateNoteDto: UpdateNoteDto): Promise<Note> {
+    const { title, description } = updateNoteDto;
+    const note = await this.findOne(id);
+    if (title) {
+      note.title = title;
+    }
+    if (description) {
+      note.description = description;
+    }
+    await this.notesRepository.save(note);
+
+    return note;
   }
 
   async remove(id: string): Promise<void> {
