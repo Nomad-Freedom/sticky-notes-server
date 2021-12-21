@@ -44,7 +44,12 @@ export class NotesService {
     return `This action updates a #${id} note`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} note`;
+  async remove(id: string): Promise<void> {
+    const result = await this.notesRepository.delete(id).catch((_error) => {
+      throw new InternalServerErrorException();
+    });
+    if (result.affected === 0) {
+      throw new NotFoundException('the node with this id does not exits');
+    }
   }
 }

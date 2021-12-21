@@ -37,7 +37,7 @@ export class NotesController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.notesService.remove(+id);
+  remove(@Param('id') id: string): Promise<void> {
+    return this.notesService.remove(id);
   }
 }
