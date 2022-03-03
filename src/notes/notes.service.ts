@@ -21,7 +21,9 @@ export class NotesService {
 
   async findAll(): Promise<Note[]> {
     try {
-      const notes = await this.notesRepository.find({});
+      const notes = await this.notesRepository.find({
+        order: { created_at: 'DESC' },
+      });
 
       return notes;
     } catch (error) {
@@ -41,13 +43,16 @@ export class NotesService {
   }
 
   async update(id: string, updateNoteDto: UpdateNoteDto): Promise<Note> {
-    const { title, description } = updateNoteDto;
+    const { title, description, color } = updateNoteDto;
     const note = await this.findOne(id);
     if (title) {
       note.title = title;
     }
     if (description) {
       note.description = description;
+    }
+    if (color) {
+      note.color = color;
     }
     await this.notesRepository.save(note);
 
