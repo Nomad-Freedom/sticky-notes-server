@@ -6,8 +6,8 @@ import { Note } from './entities/note.entity';
 @EntityRepository(Note)
 export class NotesRepository extends Repository<Note> {
   async createNote(createNoteDto: CreateNoteDto): Promise<Note> {
-    const { title, description } = createNoteDto;
-    const note = this.create({ title, description });
+    const { title, description, color } = createNoteDto;
+    const note = this.create({ title, description, color });
     try {
       await this.save(note);
       return note;

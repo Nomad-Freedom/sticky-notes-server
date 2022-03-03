@@ -8,4 +8,8 @@ export class CreateNoteDto {
   @IsString()
   @IsNotEmpty()
   description: string;
+
+  @IsString()
+  @IsNotEmpty()
+  color: string;
 }
