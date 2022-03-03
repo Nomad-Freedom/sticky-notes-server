@@ -1,44 +1,52 @@
-## Description
+# Sticky Notes (Backend)
 
-<!-- [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. -->
+![sticky notes app](https://raw.githubusercontent.com/Nomad-Freedom/sticky-notes-web/main/public/sticky-notes.png)
+
+#### Top Technologies
+
+[![Nodejs Badge](https://img.shields.io/badge/-Nodejs-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)](#) [![Typescript Badge](https://img.shields.io/badge/-Typescript-007acc?style=for-the-badge&labelColor=black&logo=typescript&logoColor=007acc)](#) [![Nest Badge](https://img.shields.io/badge/-Nest-E0234E?style=for-the-badge&labelColor=black&logo=nestjs&logoColor=E0234E)](#) [![Postgres Badge](https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&labelColor=black&logo=postgresql&logoColor=4169E1)](#)
+
+Sticky notes is a full-stack note taking web application heavily inspired
+by the Microsoft sticky notes mobile app which allows users to create,
+update, and delete notes. The front-end was built using Typescript,
+React, Material UI. The back-end was built using Node, Nest.js,
+Typescript, and Postgres.
 
 ## Installation
 
-```bash
-$ npm install
-```
+1. Install Postgres [database](https://www.postgresql.org/)
+2. Download repository
+   ```bash
+   git clone https://github.com/Nomad-Freedom/sticky-notes-server.git
+   ```
+3. Install packages
 
-## Running the app
+   ```bash
+   npm install
+   ```
 
-```bash
-# development
-$ npm run start
+4. Install the [frontend](https://github.com/Nomad-Freedom/sticky-notes-web) companion to this backend
 
-# watch mode
-$ npm run start:dev
+## Run in Development
 
-# production mode
-$ npm run start:prod
-```
+1. add env.stage.dev file in root directory
+   ```env
+    PORT=8001
+    DB_HOST=localhost
+    DB_PORT=5432
+    DB_USERNAME=<<username>>
+    DB_PASSWORD=<<password>>
+    DB_DATABASE=<<database name>>
+   ```
+2. run application
+   ```bash
+   npm run start:dev
+   ```
 
-## Test
+<!-- TODO: Add last video link -->
 
-```bash
-# unit tests
-$ npm run test
+#### :mailbox: Reach out to me!
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Stay in touch
-
-- Author - [Benny Hernandez](https://bennyhernandez.com)
-- Linkedin - [https://www.linkedin.com](https://www.linkedin.com/in/benny-hernandez-7b572219/)
-
-## License
-
-this project is [MIT licensed](LICENSE).
+- :paperclip: [My Resume/CV]()
+- :email: inquiry@bennyhernandez.com
+- :url: [bennyhernandez.com](https://www.bennyhernandez.com)
