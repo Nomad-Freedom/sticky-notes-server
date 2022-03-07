@@ -47,6 +47,6 @@ Typescript, and Postgres.
 
 #### :mailbox: Reach out to me!
 
-- :paperclip: [My Resume/CV]()
+- :paperclip: [My Resume/CV](https://github.com/Nomad-Freedom/Nomad-Freedom/blob/main/resume/resume.pdf)
 - :email: inquiry@bennyhernandez.com
 - :link: [bennyhernandez.com](https://www.bennyhernandez.com)
