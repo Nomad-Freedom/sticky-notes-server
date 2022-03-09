@@ -37,6 +37,7 @@ Typescript, and Postgres.
     DB_USERNAME=<<username>>
     DB_PASSWORD=<<password>>
     DB_DATABASE=<<database name>>
+    FRONT_URL=<<front-end url>>
    ```
 2. run application
    ```bash
